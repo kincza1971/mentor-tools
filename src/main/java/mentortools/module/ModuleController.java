@@ -29,4 +29,14 @@ public class ModuleController {
     public ModuleDTO updateModule(@PathVariable long id, UpdateModuleCommand command) {
         return service.updateModule(id, command);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteModule(@PathVariable long id) {
+        service.deleteById(id);
+    }
+
+    @DeleteMapping
+    public void deleteAll() {
+        service.deleteAll();
+    }
 }

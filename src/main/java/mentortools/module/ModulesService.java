@@ -86,4 +86,13 @@ public class ModulesService {
         return toCheck != null && toCheck.length() >2 && !toCheck.isBlank();
     }
 
+    @Transactional
+    public void deleteById(long id) {
+        repository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteAll() {
+        repository.deleteAll();
+    }
 }

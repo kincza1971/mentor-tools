@@ -1,6 +1,7 @@
 package mentortools.registration;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Data;
 import mentortools.trainingclass.TrainingClass;
 import mentortools.student.Student;
 
@@ -8,6 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "registrations")
+@Data
 public class Registration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
